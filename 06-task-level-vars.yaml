@@ -1,19 +1,17 @@
-- name: task-level vars
+- name: task level vars 
   hosts: local
   connection: local
-  vars: #play-level
-    COURSE: "ansible"
-    TRAINER: "siva"
-    DURATION: "120 Hours"
+  vars:
+    BRAND: "Calvin Klein"
+    PRODUCT: "Sunglass"
+    COST: 30$
   tasks:
   - name: print the variables
-    vars: #task-level
-      DURATION: "150 HOURS"
-      COURSE: "Devops"
-      TRAINER: "Jack"
+    BRAND: "Tommy hilfiger"
+    PRODUCT: Suitcase
+    COST: 50$
     ansible.builtin.debug:
-      msg: " the COURSE is: {{ COURSE }} and the TRAINER name is {{ TRAINER }} and the DURATION is {{ DURATION }} "
+      msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
   - name: print the variables
     ansible.builtin.debug:
-      msg: " the COURSE is: {{ COURSE }} and the TRAINER name is {{ TRAINER }} and the DURATION is {{ DURATION }} "
-  
+      msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
