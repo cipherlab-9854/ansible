@@ -8,9 +8,9 @@
   tasks:
   - name: print the variables
     vars: #task-level
-    DURATION: "150 HOURS"
-    COURSE: "Devops"
-    TRAINER: "Jack"
+      DURATION: "150 HOURS"
+      COURSE: "Devops"
+      TRAINER: "Jack"
     ansible.builtin.debug:
       msg: " the COURSE is: {{ COURSE }} and the TRAINER name is {{ TRAINER }} and the DURATION is {{ DURATION }} "
   - name: print the variables
