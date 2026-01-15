@@ -3,7 +3,7 @@
   connection: local
   vars:
     person: jack
-    profession: software engineer QA Product Designer Analyst
+    profession: "Product Designer"
   tasks:
   - name: play-level
     ansible.builtin.debug:
@@ -11,6 +11,6 @@
   - name: task-level
     vars:
       person: lee 
-      PROFESSION: Designer
+      profession: "Business Analyst"
     ansible.builtin.debug:
-      msg: "PERSON IS: {{ person }}, PROFESSION IS: {{ PROFESSION }}"
+      msg: "PERSON IS: {{ person }}, PROFESSION IS: {{ profession }}"
