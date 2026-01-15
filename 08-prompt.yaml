@@ -4,8 +4,10 @@
   vars_prompt:
   - name: BRAND
     prompt: which brand do u want
+    private: false
   - name: PRODUCT
     prompt: which product it is 
+    private: false
   tasks:
   - name: task-1
     ansible.builtin.debug:
