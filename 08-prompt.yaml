@@ -1,0 +1,12 @@
+- name: prompt playbook1
+  hosts: local
+  connection: local
+  vars_prompt:
+  - name: BRAND
+    prompt: which brand do u want
+  - name: PRODUCT
+    prompt: which product it is 
+  tasks:
+  - name: task-1
+    ansible.builtin.debug:
+      msg: "Hello {{ BRAND }}, {{ PRODUCT }}"
