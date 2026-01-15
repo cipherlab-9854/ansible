@@ -6,13 +6,13 @@
     PRODUCT: "Sunglass"
     COST: 30$
   tasks:
-  - name: print the variables
+  - name: task-level
     vars:
       BRAND: "Tommy hilfiger"
       PRODUCT: Suitcase
       COST: 50$
     ansible.builtin.debug:
       msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
-  - name: print the variables
+  - name: play-level
     ansible.builtin.debug:
       msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
