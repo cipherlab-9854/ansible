@@ -2,17 +2,15 @@
   hosts: local
   connection: local
   vars:
-    BRAND: "Calvin Klein"
-    PRODUCT: "Sunglass"
-    COST: 30$
+    person: jack
+    profession: "software engineer"
   tasks:
-  - name: task-level
-    vars:
-      BRAND: "Tommy hilfiger"
-      PRODUCT: Suitcase
-      COST: 50$
-    ansible.builtin.debug:
-      msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
   - name: play-level
     ansible.builtin.debug:
-      msg: "BRAND is: {{ BRAND }} the PRODUCT: {{ PRODUCT }} is and COST is: {{ COST }}"
+      msg: "PERSON IS: {{ person }}, PROFESSION IS: {{ profession }}"
+  - name: task-level
+    vars:
+      person: lee 
+      profession: Designer
+    ansible.builtin.debug:
+      msg: "PERSON IS: {{ person }}, PROFESSION IS: {{ profession }}"
