@@ -5,7 +5,8 @@
   - name: play1
     ansible.builtin.debug:
       msg: "hello from play1"
-- name: playbook 2
+
+- name: playbook2
   hosts: local
   connection: local
   tasks:
