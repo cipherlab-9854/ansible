@@ -1,0 +1,9 @@
+- name: multiple playbooks
+  hosts: web
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "hello from play1 and task1"
+    - name: print message
+      ansible.builtin.debug:
+        msg: hello from play1 and task2
