@@ -1,0 +1,10 @@
+- name: playlevel
+  hosts: web
+  vars:
+    brand: calvin
+    product: jacket
+  tasks:
+    - name: print the play-level vars
+      ansible.builtin.debug:
+        msg: "hello brand: {{ brand }}, product: {{ product }}"
+      
