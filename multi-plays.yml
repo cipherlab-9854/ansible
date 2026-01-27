@@ -1,4 +1,4 @@
-- name: multiple playbooks
+- name: play1
   hosts: web
   tasks:
     - name: print message
@@ -7,3 +7,10 @@
     - name: print message
       ansible.builtin.debug:
         msg: hello from play1 and task2
+
+- name: play2
+  hosts: web
+  tasks:
+    - name: print message
+      ansible.builtin.debug:
+        msg: "hell from play2"
